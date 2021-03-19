@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+}
+
+body {
+  background-image: linear-gradient(100deg, #00ffff, #d87193);
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  transition: all 1s ease;
+  max-width: 100%;
+}
+
+header {
+  font-size: 1.5rem;
+}
+
+header,
+form {
+  min-height: 20vh;
+  display: flex;
+  font-size: 2rem;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+}
+
+form input,
+form button {
+  padding: 0.5rem;
+  font-size: 2rem;
+  border: 0;
+  background: white;
+  outline: 0;
+}
+
+
+
+form button {
+  color: #e44d7f;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+form button:hover {
+  background: #e44d7f;
+  color: white;
+}
+
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-list {
+  min-width: 30%;
+  list-style: none;
+}
+
+.todo {
+  margin: 0.5rem;
+  background: white;
+  color: black;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 1rem;
+  transition: all 1s ease;
+}
+
+.todo li {
+  flex: 1;
+  padding-right: 1rem;
+}
+
+.trash-btn,
+.complete-btn {
+  background: #ff6f47;
+  color: white;
+  outline: 0;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  border: 0;
+  transition: all 0.7s ease-in;
+}
+
+.complete-btn {
+  background: rgb(73, 204, 73);
+}
+
+.complete-btn:hover {
+  background: #ff6f47;
+}
+.trash-btn:hover {
+  background: rgb(73, 204, 73);
+}
+
+.fa-trash,
+.fa-check {
+  pointer-events: none;
+}
+
+.complete {
+  text-decoration: line-through;
+  transition: all 0.3s ease-in-out;
+  color: rgb(133, 133, 133);
+  background: rgb(73, 204, 73);
+}
+
+.fall {
+  transform: translateY(-100rem) rotateZ(360deg);
+  opacity: 0;
+}
+
+header #date {
+  width: 300px;
+  height: 40px;
+  padding: 10px;
+  padding-bottom: 40px;
+  border: 3px solid rgb(255, 255, 255);
+  border-radius: 10px;
+  text-align: center;
+  background: linear-gradient(200deg, #d87193, #00ffff);
+  overflow: hidden;
+  opacity: 0.9;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  pointer-events: none;
+}
+
+header #date:hover {
+  background: linear-gradient(660deg, #d87193, #00ff9d);
+}
+
+header #date:active {
+  opacity: 0;
+}
+
+@media screen and (max-width:530px) {
+  h1{
+    font-size: 3rem;
+  }
+  form input {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width:350px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  form input {
+    width: 230px;
+  }
+
+  header #date {
+    width: 260px;
+    height: 40px;
+  }
+}
